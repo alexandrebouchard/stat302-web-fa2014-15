@@ -17,8 +17,8 @@ Syllabus: Intro to Probability
 **Other References:**
 
 - [G+S] More advanced: G.R. Grimmett and D.R. Stirzaker, Probability and Random Processes, 3rd edition, Oxford, (2001). 
-- Slides from Arnaud Doucet: [URL](href="http://people.cs.ubc.ca/~arnaud/stat302.html)
-- Slides from Jiahua Chen: [URL](href="http://www.stat.ubc.ca/~jhchen/stat302/Slides202/)
+- Slides from Arnaud Doucet: [URL](http://people.cs.ubc.ca/~arnaud/stat302.html)
+- Slides from Jiahua Chen: [URL](http://www.stat.ubc.ca/~jhchen/stat302/Slides202/)
       
         
 **Instructions for iClickers:** [URL](http://wiki.ubc.ca/Documentation:Clickers_and_Connect/UBC_iClicker_Registration_in_Connect)
