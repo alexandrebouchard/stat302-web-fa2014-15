@@ -16,6 +16,11 @@ Course Information
 **Email:** bouchard AT stat.ubc.ca
 </address>
 
+<address>
+**TA:** Sean Jewell<br/>
+**Email:** sean.jewell AT stat.ubc.ca
+</address>
+
 **Piazza:** For questions and discussions, enroll [here](http://piazza.com/ubc.ca/winterterm12014/stat302)
 
 **More information TBA soon**
