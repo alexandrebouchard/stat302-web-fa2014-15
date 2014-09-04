@@ -17,12 +17,12 @@ Syllabus: Intro to Probability
 **Other References:**
 
 - [G+S] More advanced: G.R. Grimmett and D.R. Stirzaker, Probability and Random Processes, 3rd edition, Oxford, (2001). 
-- Slides from Arnaud Doucet: [URL](href="http://people.cs.ubc.ca/~arnaud/stat302.html)
-- Slides from Jiahua Chen: [URL](href="http://www.stat.ubc.ca/~jhchen/stat302/Slides202/)
+- Slides from Arnaud Doucet: [URL](http://people.cs.ubc.ca/~arnaud/stat302.html)
       
         
-**Instructions for iClickers:** [URL](http://wiki.ubc.ca/Documentation:Clickers_and_Connect/UBC_iClicker_Registration_in_Connect)
+**Instructions for iClickers:** please follow these  [instructions](http://wiki.ubc.ca/Documentation:Clickers_and_Connect/UBC_iClicker_Registration_in_Connect) by September 8 before class. If you have questions on clickers, see this [link](http://wiki.ubc.ca/Documentation:Clickers/Information_for_Students), and contact the clicker support team at this email: clicker.support@ubc.ca. 
 
+**Evaluation:** See slides from the first lecture.
 
 **Extra exercises (optional):** These are suggested exercises from the textbook. Numbers are the same in the 8th and 9th edition. Do not hand-in your solutions to these, but feel free to ask about these exercises at the office hours.
 
@@ -35,5 +35,9 @@ Syllabus: Intro to Probability
 Theoretical Exercises: Q5, 9, 16, 18
 - Chapter 7, Problems: Q2, 3, 7, 33, 37, 38, 45, 49, 51, 53, 55, 68, 69, 73, 75, Theoretical Exercises: Q2, 17, 19, 32
 - Chapter 8, Problems: 8.1, 8.4, 8.6, 8.10, 8.13
+
+**Acknowledgement:** computing supported by an AWS in Education Grant award.
+
+**Office hours, TA, piazza, etc:** See ``Contact``.
 
 **More information TBA soon**
