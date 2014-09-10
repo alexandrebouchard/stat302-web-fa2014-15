@@ -28,6 +28,8 @@ Course Information
 
 **Piazza:** For questions and discussions, enroll [here](http://piazza.com/ubc.ca/winterterm12014/stat302)
 
-**Office hours:** The Doodle survey for office hours is open. [Follow this link.](http://doodle.com/4mbdqfvnvtt974dp) 
-
-Please fill by Monday September 8. It would be great to find a combination of times that works for everyone, so please try to mark as many slots as possible. Thank you!
+**Office hours:** 
+<address>
+*Time:* Tues 4pm-5pm, Wed 3pm-4pm <br/>
+*Location:* ESB 3125
+</address>
