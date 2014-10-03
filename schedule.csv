@@ -1,24 +1,24 @@
 "<b>Meeting</b>","<b>Notes</b>","<b>Topics</b>","<b>Readings</b>","<b>Homework (out)</b>","<b>Homework (due)</b>"
 "9/3/14",,"Overview, motivation. ",,,
 "9/5/14",,"Discrete, equally weighted probabilities.","SR 1.1-1.5",,
-"9/8/14",,"Combinatorics.",,,
-"9/10/14",,"Combinatorics continued.","SR 2.1-2.5 (optional)","Webwork 1+2",
-"9/12/14",,"Wrapping up combinatorics problems. Independence.","SR 3.1, 3.2","Assignment 1",
-"9/15/14",,"Conditional probabilities.","SR 3.3-3.5",,
+"9/8/14",,"Axioms of probability. Redundancy example. Some set theory and De Morgan's laws. Combinatorics.",,,
+"9/10/14",,"Partitions. Decision trees. Combinations and permutations.","SR 2.1-2.5 (optional)","Webwork 1+2",
+"9/12/14",,"More combinatorics examples. Conditional probabilities. Independence.","SR 3.1, 3.2","Assignment 1",
+"9/15/14",,"More on conditional probabilities. Review problems.","SR 3.3-3.5",,
 "9/16/14","Last day of drop/add period",,,,
-"9/17/14",,,,,"Webwork 1+2"
-"9/19/14",,,,,
-"9/22/14",,,,,"Assignment 1"
-"9/24/14",,,,,
-"9/26/14",,,,,
-"9/29/14",,,,,
-"10/1/14",,,,,
-"10/3/14",,,,,
+"9/17/14",,"Worked out exercises on decision trees, birthday problem, allocations. Chain rule.",,,"Webwork 1+2"
+"9/19/14",,"Law of total probability. Bayes rule. HIV example.",,,
+"9/22/14",,"Conditional independence. Prediction. Bayesian search example. ",,,"Assignment 1"
+"9/24/14",,"Conditioning: more examples and applications.",,"Webwork 3+4",
+"9/26/14",,"Random variables and expectation","SR 4.1, 4.2, 4.3",,
+"9/29/14",,"Discrete uniform and Bernoulli. PMF. ","SR 4.4, 4.5",,
+"10/1/14",,"Conditioning and expectation. Graphical models. Automated diagnostic example. Simpson paradox.",,,"Webwork 3+4"
+"10/3/14",,"Properties of expectation. Variance.","SR 4.6, 4.7",,
 "10/6/14",,,,,
-"10/8/14",,,,,
+"10/8/14",,"Binomial and Poisson random variables","SR 4.8, 4.9",,
 "10/10/14",,,,,
 "10/13/14","Thanksgiving Day. University closed. ",,,,
-"10/15/14",,,,,
+"10/15/14",,"Hypergeometric, negative binomial random variables",,,
 "10/17/14",,,,,
 "10/20/14",,,,,
 "10/22/14","In-class midterm","MIDTERM",,,

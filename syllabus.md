@@ -40,4 +40,3 @@ Theoretical Exercises: Q5, 9, 16, 18
 
 **Office hours, TA, piazza, etc:** See ``Contact``.
 
-**More information TBA soon**
