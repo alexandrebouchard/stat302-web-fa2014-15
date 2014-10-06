@@ -13,12 +13,12 @@
 "9/26/14",,"Random variables and expectation","SR 4.1, 4.2, 4.3",,
 "9/29/14",,"Discrete uniform and Bernoulli. PMF. ","SR 4.4, 4.5",,
 "10/1/14",,"Conditioning and expectation. Graphical models. Automated diagnostic example. Simpson paradox.",,,"Webwork 3+4"
-"10/3/14",,"Properties of expectation. Variance.","SR 4.6, 4.7",,
-"10/6/14",,,,,
-"10/8/14",,"Binomial and Poisson random variables","SR 4.8, 4.9",,
-"10/10/14",,,,,
+"10/3/14",,"Properties of expectation. Variance.","SR 4.6, 4.7","Webwork 5",
+"10/6/14",,"Binomial random variables",,"Assignment 2",
+"10/8/14",,"Poisson random variables","SR 4.8, 4.9",,
+"10/10/14",,,,,"Webwork 5"
 "10/13/14","Thanksgiving Day. University closed. ",,,,
-"10/15/14",,"Hypergeometric, negative binomial random variables",,,
+"10/15/14",,"Hypergeometric, negative binomial random variables",,,"Assignment 2"
 "10/17/14",,,,,
 "10/20/14",,,,,
 "10/22/14","In-class midterm","MIDTERM",,,
