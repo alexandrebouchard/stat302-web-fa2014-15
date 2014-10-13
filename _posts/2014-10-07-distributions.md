@@ -19,7 +19,7 @@ category: 'Tool'
 - Parameters: a *success probability* $0 \leq p \leq 1$, and a *number of trials* $n \in \mathbb{N}$
 - Notation in JAGS: ``X ~ dbin(p, n)`` **Note:** $p$ and $n$ have a different order in JAGS and the textbook.
 - Mathematical notation: $X \sim \textrm{Bin}(n, p)$, or  $X \sim \textrm{Binomial}(n, p)$
-- PMF: $\P(X = i) = \binom{n}{i} p^i (1-p)^{n-i}$, for $i \in \{0, 1, \dots, n\}$
+- PMF: $\P(X = i) = \binom{n}{i} p^i (1-p)^{n-i}$, for $i \in \\{0, 1, \dots, n\\}$
 - Mean: $np$
 - Variance: $np(1-p)$
 - Relationship(s) to other random variables:
@@ -31,14 +31,14 @@ category: 'Tool'
 - Parameter: a set of possible values $\{1, 2, \dots, n\}$, and a normalized vector of probabilities $p = (p\_1, \dots, p\_n)$ giving the probability of each value in the set
 - Notation in JAGS: ``X ~ dcat(p)``
 - Mathematical notation: $X \sim \textrm{Cat}(p)$, or $X \sim \textrm{Categorical}(p)$
-- PMF: $\P(X = i) = p\_i$, for $i \in \{1, 2, \dots, n\}$
+- PMF: $\P(X = i) = p\_i$, for $i \in \\{1, 2, \dots, n\\}$
 
 **Poisson:** 
 
 - Parameter: a *rate* $\lambda=$lambda > 0
 - Notation in JAGS: ``X ~ dpois(lambda)``
 - Mathematical notation: $X \sim \textrm{Poi}(\lambda)$ or $X \sim \textrm{Poisson}(\lambda)$
-- PMF: $\P(X = i) = e^{-\lambda} \lambda^i / i!$, for $i \in \{0, 1, 2, 3, \dots\}$
+- PMF: $\P(X = i) = e^{-\lambda} \lambda^i / i!$, for $i \in \\{0, 1, 2, 3, \dots\\}$
 - Mean: $\lambda$
 - Variance: $\lambda$
 - Relationship(s) to other random variables: As an approximation for the Binomial distribution (see above). 
@@ -47,6 +47,37 @@ category: 'Tool'
 
 - Parameter: a set of possible values $\{1, 2, \dots, n\}$
 - Notation in JAGS: use a categorical distribution, setting equal probability to each value
-- Mathematical notation: $X \sim \textrm{Unif}(\{1, 2, \dots, n\})$
-- PMF: $\P(X = i) = 1/n$, for $i \in \{1, 2, \dots, n\}$
+- Mathematical notation: $X \sim \textrm{Unif}(\\{1, 2, \dots, n\\})$
+- PMF: $\P(X = i) = 1/n$, for $i \in \\{1, 2, \dots, n\\}$
 - Relationship(s) to other random variables: Categorical distribution with each value having the same probability. 
+
+**Geometric**
+
+- Parameter: a probability of success, $0 \leq p \leq 1$
+- Notation in JAGS: ```X ~ dnegbin(p, 1)```
+- Mathematical notation: $X \sim \textrm{Geometric}(p)$
+- PMF: $P(X = i) = (1-p)^{i-1}p$, for $i \in \\{1, 2, 3, \ldots \\}$
+- Mean: $\frac1p$
+- Variance: $\frac{1-p}{p^2}$
+- Relationship(s) to other random variables:  $\textrm{Geometric}(p) = \textrm{NB}(p, r = 1)$
+
+**Negative Binomial**
+
+- Parameters: a probability of success, $0 \leq p \leq 1$, and a number of successes, $r\in \mathbb{N}$
+- Notation in JAGS: ```X ~ dnegbin(p, r)```. Note that the JAGS implementation is translated from the PMF presented in the textbook (a reparameterization). That is, the support of $X$ in JAGS is $\\{0, 1, 2, \ldots \\}$, whereas the support of $X$ in the textbook is $\\{r, r + 1, r + 2, \ldots \\}$. 
+- Mathematical notation: $X \sim \textrm{NB}(p, r)$
+- PMF: $P(X = i) = \binom{i-1}{r-1}(1-p)^{i-r}p^r$, for $i \in \\{r, r + 1, r + 2, r + 3, \ldots\\}$
+- Mean: $\frac{r}{p}$
+- Variance: $\frac{r(1-p)}{p^2}$
+- Relationship(s) to other random variables:  $\textrm{Geometric}(p) = \textrm{NB}(p, r = 1)$
+
+
+**Hypergeometric** 
+
+- Parameters: Population size $N$ with $m$ successes and $n$ draws without replacement ($0 \leq n, m \leq N$). 
+- Notation in JAGS: Not implemented. 
+- Mathematical notation: $X \sim \textrm{HyperGeometric}(N, n, m)$
+- PMF: $P(X = i) = \frac{\binom{m}{i}\binom{N-m}{n-i}}{\binom{N}{n}},$ for $i\in \\{\textrm{max}(0,m+n - N),\ldots, \textrm{min}(n,m)\\}$.
+- Mean: $\frac{nm}{N}$
+- Variance: $\frac{nm}{N}\left(1-\frac{m}{N}\right)\left(\frac{N-n}{N-1}\right)$
+- Relationship(s) to other random variables: If $n=1$ the the hypergeometric is equivalent to a Bernoulli distribution with parameter $p = \frac{m}{N}$. 
