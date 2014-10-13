@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Distributions - Quick reference"
+category: 'Tool'
 ---
 
 **Bernoulli:**
