@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JAGS and R online"
+title: "JAGS tutorial"
 category: 'Tool'
 ---
 
