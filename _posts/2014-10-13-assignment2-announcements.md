@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Assignment2 - announcements"
+title: "Assignment 2 - announcements"
 ---
 
 
