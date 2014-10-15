@@ -53,7 +53,7 @@ title: "Distributions - Quick reference"
 **Geometric**
 
 - Parameter: a probability of success, $0 \leq p \leq 1$
-- Notation in JAGS: ```X ~ dnegbin(p, 1)```
+- Notation in JAGS: ```Y ~ dnegbin(p, 1) ``` then $X = Y + 1$ is geometrically distributed with parameter $p$
 - Mathematical notation: $X \sim \textrm{Geometric}(p)$
 - PMF: $P(X = i) = (1-p)^{i-1}p$, for $i \in \\{1, 2, 3, \ldots \\}$
 - Mean: $\frac1p$
@@ -63,7 +63,7 @@ title: "Distributions - Quick reference"
 **Negative Binomial**
 
 - Parameters: a probability of success, $0 \leq p \leq 1$, and a number of successes, $r\in \mathbb{N}$
-- Notation in JAGS: ```X ~ dnegbin(p, r)```. Note that the JAGS implementation is translated from the PMF presented in the textbook (a reparameterization). That is, the support of $X$ in JAGS is $\\{0, 1, 2, \ldots \\}$, whereas the support of $X$ in the textbook is $\\{r, r + 1, r + 2, \ldots \\}$. 
+- Notation in JAGS: ```Y ~ dnegbin(p, r)``` then $X = Y + r$ has the negative binomial distribution with parameters $r$ and $p$  
 - Mathematical notation: $X \sim \textrm{NB}(p, r)$
 - PMF: $P(X = i) = \binom{i-1}{r-1}(1-p)^{i-r}p^r$, for $i \in \\{r, r + 1, r + 2, r + 3, \ldots\\}$
 - Mean: $\frac{r}{p}$
