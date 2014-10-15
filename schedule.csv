@@ -8,17 +8,17 @@
 "9/16/14","Last day of drop/add period",,,,
 "9/17/14",,"Worked out exercises on decision trees, birthday problem, allocations. Chain rule.",,,"Webwork 1+2"
 "9/19/14",,"Law of total probability. Bayes rule. HIV example.",,,
-"9/22/14",,"Conditional independence. Prediction. Bayesian search example. ",,,"Assignment 1"
-"9/24/14",,"Conditioning: more examples and applications.",,"Webwork 3+4",
-"9/26/14",,"Random variables and expectation","SR 4.1, 4.2, 4.3",,
-"9/29/14",,"Discrete uniform and Bernoulli. PMF. ","SR 4.4, 4.5",,
-"10/1/14",,"Conditioning and expectation. Graphical models. Automated diagnostic example. Simpson paradox.",,,"Webwork 3+4"
-"10/3/14",,"Properties of expectation. Variance.","SR 4.6, 4.7","Webwork 5",
-"10/6/14",,"Binomial random variables",,"Assignment 2",
-"10/8/14",,"Poisson random variables","SR 4.8, 4.9",,
-"10/10/14",,"Hypergeometric, negative binomial random variables",,,"Webwork 5"
+"9/22/14",,"Conditional independence. Prediction. ",,,"Assignment 1"
+"9/24/14",,"Conditioning: more examples and applications. Bayesian search example. ",,"Webwork 3+4",
+"9/26/14",,"Random variables and expectation. PMF. ","SR 4.1, 4.2, 4.3",,
+"9/29/14",,"Discrete uniform and Bernoulli. Conditioning and expectation.","SR 4.4, 4.5",,
+"10/1/14",,"Graphical models. Automated diagnostic example. Simpson paradox.",,,"Webwork 3+4"
+"10/3/14",,"Properties of expectation. Variance. Gambling problems.","SR 4.6, 4.7","Webwork 5",
+"10/6/14",,"Binomial random variables. Investment problems.",,"Assignment 2",
+"10/8/14",,"Rare events, accidental deaths,  and the Poisson approximation. Poisson random variables. ","SR 4.8, 4.9",,
+"10/10/14",,"Geometric, negative binomial random variables. Hiring/interview problems.",,,"Webwork 5"
 "10/13/14","Thanksgiving Day. University closed. ",,,,
-"10/15/14",,,,,
+"10/15/14",,"Hypergeometric distribution. ",,,
 "10/17/14",,,,,"Assignment 2"
 "10/20/14",,,,,
 "10/22/14","In-class midterm","MIDTERM",,,
