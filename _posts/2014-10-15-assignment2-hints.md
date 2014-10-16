@@ -65,9 +65,6 @@ e^x &=& \sum\_{n=0}^\infty \frac{x^n}{n!} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + 
 for all $x\in\mathbb{R}$. 
 
 --------------------
-The function $\sin(x)$ is periodic with period $2\pi$. That means that $\sin(x + 2k\pi) = \sin(x)$ for all integers $k$. The same holds for $\cos(x)$. 
-
---------------------
 **Question 3.2** 
 
 Use the property that $E(g(X)) = \sum\_{x \in S\_X} g(x) P(X = x)$ where $g(X) = \sin(X)$. Later in the question you should formally calculate the pmf of $Y= \sin(X)$ and from the definition of expectation, $E(Y) = \sum\_{y\in S\_Y} y P(Y=y)$, show that these quantities are equivalent. (NB: $S\_X$ and $S\_Y$ denote the support of $X$ and $Y$, respectively)
