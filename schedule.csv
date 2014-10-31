@@ -18,15 +18,15 @@
 "10/8/14",,"Rare events, accidental deaths,  and the Poisson approximation. Poisson random variables. ","SR 4.8, 4.9",,
 "10/10/14",,"Geometric, negative binomial random variables. Hiring/interview problems.",,,"Webwork 5"
 "10/13/14","Thanksgiving Day. University closed. ",,,,
-"10/15/14",,"Hypergeometric distribution. ",,,
-"10/17/14",,,,,"Assignment 2"
-"10/20/14",,,,,
+"10/15/14",,"Hypergeometric distribution. Exercises.",,,
+"10/17/14",,"Overview of all distributions. Application in cancer genetics.",,,"Assignment 2"
+"10/20/14",,"Midterm practice solutions. Examples of Bayesian analysis in JAGS: cancer genetics, inferring population size from hypergeometric.",,,
 "10/22/14","In-class midterm","MIDTERM",,,
-"10/24/14",,,,,
-"10/27/14",,,,,
-"10/29/14",,,,,
-"10/31/14",,,,,
-"11/3/14",,,,,
+"10/24/14",,"Continuous distributions.","SR 5.1, 5.2",,
+"10/27/14",,"The uniform and exponential distributions. Richter scale example.","SR 5.4, 5.7",,
+"10/29/14",,"Poisson Process 1. Mutations on a genome.","SR 5.5","Webwork 7",
+"10/31/14",,"Poisson Process 2. Earthquakes.",,,
+"11/3/14",,,,,"Webwork 7"
 "11/5/14",,,,,
 "11/7/14",,,,,
 "11/10/14",,,,,
