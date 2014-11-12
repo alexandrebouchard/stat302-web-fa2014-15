@@ -23,15 +23,15 @@
 "10/20/14",,"Midterm practice solutions. Examples of Bayesian analysis in JAGS: cancer genetics, inferring population size from hypergeometric.",,,
 "10/22/14","In-class midterm","MIDTERM",,,
 "10/24/14",,"Continuous distributions.","SR 5.1, 5.2",,
-"10/27/14",,"The uniform and exponential distributions. Richter scale example.","SR 5.4, 5.7",,
-"10/29/14",,"Poisson Process 1. Mutations on a genome.","SR 5.5","Webwork 7",
+"10/27/14",,"The uniform and exponential distributions. Richter scale example.","SR 5.4, 5.7","Webwork 7",
+"10/29/14",,"Poisson Process 1. Mutations on a genome.","SR 5.5",,
 "10/31/14",,"Poisson Process 2. Earthquakes.",,,
-"11/3/14",,,,,"Webwork 7"
-"11/5/14",,,,,
-"11/7/14",,,,,
+"11/3/14",,"Gamma distribution. Random walks, normal distribution, and normal approximation. Roulette and gambling.",,,"Webwork 7"
+"11/5/14",,"Joint continuous distributions","SR 6.1, 6.2, 6.3","Webwork 8",
+"11/7/14",,"Marginal distributions. Independence and dependence of continuous random variables.",,"Assignment 3",
 "11/10/14",,,,,
-"11/12/14",,,,,
-"11/14/14",,,,,
+"11/12/14",,,,,"Webwork 8"
+"11/14/14",,,,,"Assignment 3"
 "11/17/14",,,,,
 "11/19/14",,,,,
 "11/21/14",,,,,
