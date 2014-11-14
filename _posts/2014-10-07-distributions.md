@@ -4,6 +4,12 @@ title: "Distributions - Quick reference"
 category: 'Tool'
 ---
 
+- [Discrete distributions](#discrete)
+- [Continuous distributions](#continuous)
+
+
+### Discrete distributions <a name="discrete"></a>
+
 **Bernoulli:**
 
 - Parameter: a *success probability* $0\leq p \leq 1$
@@ -24,7 +30,7 @@ category: 'Tool'
 - Variance: $np(1-p)$
 - Relationship(s) to other random variables:
 	* If $X \sim \textrm{Bin}(n, p)$, then $X$ can be written as the sum of Bernoulli random variables: $X = X\_1 + X\_2 + \ldots + X\_n$ where $X\_i\sim \textrm{Bern}(p)$ for $i=1,2, \ldots, n$
-	* For large $n$ (>100), small $p$ (<0.01), and intermediate $\lambda = np$ (<20), the Binomial distribution is approximated by the Poisson distribution with parameter $\lambda$  
+	* For large $n$ (>100), small $p$ (<0.01), and intermediate $\lambda = np$ (<20), the Binomial distribution is approximated by the Poisson distribution with parameter $\lambda$.  
 
 **Categorical:**
 
@@ -81,3 +87,45 @@ category: 'Tool'
 - Mean: $\frac{nm}{N}$
 - Variance: $\frac{nm}{N}\left(1-\frac{m}{N}\right)\left(\frac{N-n}{N-1}\right)$
 - Relationship(s) to other random variables: If $n=1$ the the hypergeometric is equivalent to a Bernoulli distribution with parameter $p = \frac{m}{N}$. 
+
+
+### Continuous distributions <a name="continuous"></a>
+
+**Uniform**
+
+- Parameters: An interval $(a,b)$ specified by two parameters $-\infty < a < b < \infty$.
+- Notation in JAGS: ``X ~ dunif(a, b)``.
+- Mathematical notation: $X \sim \textrm{Unif}(a, b)$.
+- PDF: $f(x) = \frac{1}{b-a},$ for $x\in (a,b)$, and $0$ otherwise.
+- Mean: $\frac{a + b}{2}$
+- Variance: $\frac{(a + b)^2}{12}$
+
+**Normal**
+
+- Parameters: mean $\mu\in \RR$ and variance $\sigma^2\in \mathbb{R}\_{>0}$.
+- Notation in JAGS: ``X ~ dnorm(mu,1/sigma^2)``.
+- Mathematical notation: $X \sim \textrm{N}(\mu, \sigma^2)$
+- PDF: $f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{ -(x-\mu)^2/2\sigma^2},$ for $x\in \RR$.
+- Mean: $\mu$
+- Variance: $\sigma^2$
+- Relationship(s) to other random variables: (1) If $X\_1,\ldots,X\_n\simiid \textrm{N}(\mu, \sigma)$ then $S\_n = \sum\_{i=1}^n X\_i \sim \textrm{N}(n\mu, n\sigma^2)$; (2) Normal approximation for binomially distribution random variables: for large $n$ if $X\sim\mathrm{Binomial}(n,p)$ then $\frac{X - np}{\sqrt{np(1-p)}}$ is approximately distributed as $\mathrm{N}(0,1)$; (3) If $X\_1,\ldots,X\_n$ are independent and identically distributed with finite mean $\mu$ and variance $\sigma^2$ then $S\_n = \sum\_{i=1}^n X\_i \approx n\mu + \sigma\sqrt{n} Z$ where $Z\sim\mathrm{N}(0,1)$. 
+
+**Exponential**
+
+- Parameters: rate parameter $\lambda>0$. 
+- Notation in JAGS: ``X ~ dexp(lambda)``.
+- Mathematical notation: $X \sim \textrm{Exp}(\lambda)$.
+- PDF: $f(x) = \lambda \exp(-\lambda x),$ for $x>0$, $0$ otherwise.
+- Mean: $\frac{1}{\lambda}$
+- Variance: $\frac{1}{\lambda^2}$
+- Relationship(s) to other random variables: (1) If $X\_1,\ldots,X\_n\simiid \textrm{Exp}(\lambda)$ then $S\_n = \sum\_{i=1}^n X\_i \sim \textrm{Gamma}(\mbox{shape} = n, \mbox{rate} = \lambda)$; (2) The waiting time between occurrences in a Poisson Process with intensity parameter $\lambda$ is exponentially distributed with parameter $\lambda$. 
+
+**Gamma**
+
+- Parameters: Shape parameter $\alpha>0$ and rate parameter $\lambda>0$. 
+- Notation in JAGS: ``X ~ dgamma(alpha, lambda)``. 
+- Mathematical notation: $X \sim \textrm{Gamma}(\alpha, \lambda)$
+- PDF: $f(x) = \frac{\lambda \exp(-\lambda x)(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}$, for $x>0$, $0$ otherwise. 
+- Mean: $\frac{\alpha}{\lambda}$
+- Variance: $\frac{\alpha}{\lambda^2}$
+- Relationship(s) to other random variables: (1) If $X\_1,\ldots,X\_n\simiid \textrm{Exp}(\lambda)$ then $S\_n = \sum\_{i=1}^n X\_i \sim \textrm{Gamma}(\mbox{shape} = n, \mbox{rate} = \lambda)$; (2) The waiting time between $n$ occurrences in a Poisson Process with intensity parameter $\lambda$ is gamma distributed with shape parameter $n$ and rate parameter $\lambda$. 
