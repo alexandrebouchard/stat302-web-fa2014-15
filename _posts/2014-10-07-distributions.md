@@ -98,7 +98,7 @@ category: 'Tool'
 - Mathematical notation: $X \sim \textrm{Unif}(a, b)$.
 - PDF: $f(x) = \frac{1}{b-a},$ for $x\in (a,b)$, and $0$ otherwise.
 - Mean: $\frac{a + b}{2}$
-- Variance: $\frac{(a + b)^2}{12}$
+- Variance: $\frac{(b-a)^2}{12}$
 
 **Normal**
 
