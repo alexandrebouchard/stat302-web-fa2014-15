@@ -1,0 +1,291 @@
+---
+layout: post
+title: "Mini Project"
+---
+
+This is completely optional, and would add up to 10 percent bonus points on the webwork/clicker part of the grade. If you are interested, submit at the same time as assignment 4.
+
+Mixture with unknown parameters
+-------------------------------
+
+This project builds on the material from November 24. To get started, check out the slides for a scaffold for the bugs files. See also http://www.stat.ubc.ca/~bouchard/courses/stat302-fa2014-15//2014/11/19/doomsday-jags.html for the steps to create a new model.
+
+Modify the JAGS mixture model to take into account the case where the mean of the two mixtures is unknown. Do the same for the proportion of the two sub-populations, and the variances. In a written report added to the assignment 4 you will hand in, report the variances for the two sub-populations, and other plots of interest. 
+
+Follow the following instructions for getting the data into JAGS: create three files, the usual ``model.bugs`` and ``run.R``, as well as ``normal-data.csv``, which you can find at the bottom of this file.
+
+For ``run.R`` use:
+
+```r
+require(rjags)
+require(coda.discrete.utils)
+require(ggplot2)
+set.seed(14718)
+
+data <- read.csv( file="normal-data.csv", header = FALSE)$V1
+
+model <- jags.model(
+  'model.bugs', data = list('y' = data, 'numberOfPoints' = length(data)))
+
+samples <- 
+  jags.samples(model,
+               c('var1', 'var2'), 
+               100000) 
+               
+
+coda.density(samples)
+```
+
+For ``model.bugs`` you can start with the following scaffold:
+
+```r
+model {
+
+  # TODO
+  var1 ~ # TODO: Put a prior on the variance of the first sub-pop
+  var2 ~ # TODO: same for the second one
+  
+  # TODO
+  
+  for (i in 1:numberOfPoints) {
+    # TODO
+    y[i] ~ # Note: the second parameter of the normal in JAGS is 1/variance!
+  }
+
+}
+```
+
+Harder problem
+--------------
+
+Look at the data in the file ``texting-data.csv`` which you can find at the bottom of this post. The n-th row represents the number of texts sent by the user on day n. We will use a mixture model and JAGS to try to find a point in time where the user's texting habits changed in that period. Report the posterior over the point in time where the habits changed.
+
+Some guidance for getting the data into JAGS: create three files, the usual ``model.bugs`` and ``run.R``, as well as ``texting-data.csv``, in which you should paste the contents of the file you downloaded above. 
+
+For ``run.R`` use:
+
+```r
+require(rjags)
+require(coda.discrete.utils)
+require(ggplot2)
+set.seed(14718)
+
+data <- read.csv( file="texting-data.csv", header = FALSE)$V1
+
+model <- jags.model(
+  'model.bugs', data = list('T' = data, 'numberOfDays' = length(data)))
+
+samples <- 
+  jags.samples(model,
+               c('segment'), 
+               100000) 
+               
+
+coda.pmf(samples)
+```
+
+For ``model.bugs`` you can start with the following scaffold:
+
+```r
+model {
+
+  # TODO
+  segment ~ # TODO: define a categorical random variable to control when the user's habits are hypothesized to have changed. Hint: Force its value to be away from the end points.
+  
+  for (i in 1:numberOfDays) {
+    # TODO
+    T[i] ~ # TODO: distribution for day i of the number of text T[i] on that day
+  }
+
+}
+```
+
+Data for first question
+-----------------------
+
+``normal-data.csv``:
+
+```
+0.35058871780447104
+5.180906021556639
+0.3329817574756046
+-0.7815324598877094
+5.615351475814452
+0.5041925019230088
+4.524391710459099
+-3.2193886844816477
+-1.962731125487312
+5.2072430285286035
+1.8337849647755267
+3.72844439874188
+-1.3213283708733576
+5.096779082425295
+-2.135762908860358
+-1.184703238258447
+-1.2527420092444477
+4.018239605337441
+4.978199767014967
+-1.1627462482364486
+4.7787782364112426
+0.8258792515824446
+4.347013329834954
+0.23796496440639783
+5.078325162103688
+0.3412982529876878
+5.669957008986754
+1.2945887159123
+-0.8033448198187619
+-0.4748987989696549
+-1.516960074322577
+3.8747838541008464
+5.649747287825713
+4.883612441422431
+-0.34654069714353986
+5.791514790803091
+-0.9319686661789717
+5.4250091309586566
+5.573931018696897
+0.2042346818011214
+5.026446796799488
+4.604693280417671
+0.01589109383304767
+-1.1508834117190503
+3.1643464612899113
+5.386870621056502
+-0.03407355201354537
+-0.6347493485260342
+4.824388015799611
+0.866333818404816
+5.290931868345073
+5.224694112974302
+0.15992946792377924
+4.4661807226501145
+4.962517198309641
+4.771113652980795
+5.582956961084868
+4.676520956221285
+-0.16803079315647007
+0.26196264267863506
+5.6149011132860736
+4.416510416476282
+6.032331568849238
+0.03446196965535039
+5.432085786295941
+-0.3120072184634268
+4.973956866099163
+4.243351498260053
+-0.5011314817107788
+4.105534078312663
+5.3051192229880595
+4.897989098568264
+4.645870871255454
+3.8928864069375244
+-0.6712379213576861
+4.704913224838831
+5.9405763371890234
+-1.6246674627339015
+-1.435884259579923
+5.252279047396595
+3.9837595145091047
+4.643160895610937
+5.140700464885862
+6.486978454015864
+5.437533603754578
+6.136770014844775
+0.900051725774583
+1.0847434288460556
+1.6657519632966387
+4.646161417229667
+2.105875420220218
+0.8811109485591829
+4.860528710070211
+0.9086205793984642
+5.510684494313007
+5.738392954449374
+2.13209833065447
+4.251570381918352
+4.664739137444746
+-1.0580452457617797
+```
+
+Data for second question
+------------------------
+
+``texting-data.csv``:
+
+```
+1.300000000000000000e+01
+2.400000000000000000e+01
+8.000000000000000000e+00
+2.400000000000000000e+01
+7.000000000000000000e+00
+3.500000000000000000e+01
+1.400000000000000000e+01
+1.100000000000000000e+01
+1.500000000000000000e+01
+1.100000000000000000e+01
+2.200000000000000000e+01
+2.200000000000000000e+01
+1.100000000000000000e+01
+5.700000000000000000e+01
+1.100000000000000000e+01
+1.900000000000000000e+01
+2.900000000000000000e+01
+6.000000000000000000e+00
+1.900000000000000000e+01
+1.200000000000000000e+01
+2.200000000000000000e+01
+1.200000000000000000e+01
+1.800000000000000000e+01
+7.200000000000000000e+01
+3.200000000000000000e+01
+9.000000000000000000e+00
+7.000000000000000000e+00
+1.300000000000000000e+01
+1.900000000000000000e+01
+2.300000000000000000e+01
+2.700000000000000000e+01
+2.000000000000000000e+01
+6.000000000000000000e+00
+1.700000000000000000e+01
+1.300000000000000000e+01
+1.000000000000000000e+01
+1.400000000000000000e+01
+6.000000000000000000e+00
+1.600000000000000000e+01
+1.500000000000000000e+01
+7.000000000000000000e+00
+2.000000000000000000e+00
+1.500000000000000000e+01
+1.500000000000000000e+01
+1.900000000000000000e+01
+7.000000000000000000e+01
+4.900000000000000000e+01
+7.000000000000000000e+00
+5.300000000000000000e+01
+2.200000000000000000e+01
+2.100000000000000000e+01
+3.100000000000000000e+01
+1.900000000000000000e+01
+1.100000000000000000e+01
+1.800000000000000000e+01
+2.000000000000000000e+01
+1.200000000000000000e+01
+3.500000000000000000e+01
+1.700000000000000000e+01
+2.300000000000000000e+01
+1.700000000000000000e+01
+4.000000000000000000e+00
+2.000000000000000000e+00
+3.100000000000000000e+01
+3.000000000000000000e+01
+1.300000000000000000e+01
+2.700000000000000000e+01
+0.000000000000000000e+00
+3.900000000000000000e+01
+3.700000000000000000e+01
+5.000000000000000000e+00
+1.400000000000000000e+01
+1.300000000000000000e+01
+2.200000000000000000e+01
+```

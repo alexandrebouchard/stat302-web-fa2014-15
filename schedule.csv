@@ -33,8 +33,10 @@
 "11/12/14",,"Sums of random variables.",,,"Webwork 8"
 "11/14/14",,"Sums of random variables, continued. Investment problem, continued. Joint probability mass function.","SR 6.4, 6.5",,
 "11/17/14",,"Conditioning, continuous case. Doomsday argument.",,,"Assignment 3"
-"11/19/14",,,,,
-"11/21/14",,,,,
-"11/24/14",,,,,
-"11/26/14",,,,,
-"11/28/14","Last day of classes. ",,,,
+"11/19/14",,"More continuous conditioning. Law of total expectation.","SR 7.5, 7.6","Webwork 9 and 10 (optional)",
+"11/21/14",,"Law of total expectation and law of total variance, continued. Mixture models. Bayesian parameter estimation.",,,
+"11/24/14",,"Covariance and correlation.","SR 7.4",,
+"11/26/14",,"Introduction to limit theorems.","SR 8.1, 8.2, 8.3","Assignment 4","Webwork 9 and 10 (optional)"
+"11/28/14","Last day of classes. ","Information on the final exam. Markov inequality.",,,
+"12/12/14","Last assignment due date",,,,"Assignment 4"
+"12/16/14","Final exam",,,,
